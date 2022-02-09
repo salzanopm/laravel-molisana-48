@@ -13,6 +13,10 @@ ul {
   margin: auto;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   text-align: center;
 }
@@ -38,4 +42,17 @@ header .menu li.current {
 
 main {
   background-image: url("../images/verdure.jpg");
+}
+main h2 {
+  color: #002d75;
+}
+main .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .products .product {
+  width: calc(33.3333333333% - 10px);
+  background-color: white;
+  text-align: center;
+  margin: 5px;
 }
