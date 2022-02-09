@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+
+    .logo {
+        width: 200px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            &.current {
+                background-color: $primary_color;
+            }
+        }
+    }
+}
