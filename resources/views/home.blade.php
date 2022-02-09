@@ -5,5 +5,11 @@ Products
 @endsection
 
 @section('main_content')
-    <h1>Ciao sono la homepage</h1>
+    <section>
+        <div class="container">
+            <div class="products-list">
+                <h2>Lista prodotto</h2>
+            </div>
+        </div>
+    </section>
 @endsection
