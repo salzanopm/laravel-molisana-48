@@ -14,5 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $pasta_array = config('pasta');
+    
+    $paste_lunghe = [];
+    $paste_corte = [];
+    $paste_cortissime = [];
+
+    foreach($pasta_array as $pasta) {
+        if($pasta['tipo'] === 'lunga') {
+            $paste_lunghe[] = $pasta;
+        } elseif ($pasta['tipo'] === 'corta') {
+            $paste_corte[] = $pasta;
+        } elseif($pasta['tipo'] === 'cortissima') {
+            $paste_cortissime[] = $pasta;
+        }
+    }
+
+    $data = [
+        'paste_lunghe' => $paste_lunghe,
+        'paste_corte' => $paste_corte,
+        'paste_cortissime' => $paste_cortissime
+    ];
+
+    return view('home', $data);
 });
